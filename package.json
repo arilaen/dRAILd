@@ -3,10 +3,7 @@
   , "version": "0.0.1"
   , "description": "An app that uses train consist numbers to find out when your next train is coming."
   , "main": "app.js"
-  ,"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+ , "repository": {
     "type": "git",
     "url": "https://github.com/arilaen/draild-app.git"
   },

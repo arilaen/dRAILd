@@ -6,14 +6,7 @@
 
 
 exports.index = function(req, res){
-var d3 = require('d3')
-  , topojson = require('topojson')
-  , queue = require('queue-async')
-  , jsdom = require('jsdom')
-  , $ = require('jquery');
-
-
-  res.render('index', { title: 'Express' , layout: false})
+  res.render('index', { title: 'dRAILD | How Screwed Am I?' , layout: false})
 };
 
 exports.about = function(req, res){
