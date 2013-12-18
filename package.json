@@ -1,0 +1,28 @@
+{
+    "name": "draild"
+  , "version": "0.0.1"
+  , "description": "An app that uses train consist numbers to find out when your next train is coming."
+  , "main": "app.js"
+  ,"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arilaen/draild-app.git"
+  },
+  "keywords": [
+    "draild",
+    "heroku",
+    "massdot"
+  ]
+  , "dependencies": {
+      "express": "2.5.8"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "d3": "3"
+    , "topojson": "1.4"
+    , "queue-async": "1.0"
+    , "jquery": "1.8.3"
+    //, "requirejs": "2.1.9"
+  }
+}
