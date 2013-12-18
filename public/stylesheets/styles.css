@@ -79,7 +79,7 @@
     }
     #choices {
       text-align:center;
-      font-size:180%;
+      font-size:170%;
       font-style:italic;
       padding:0 10px;        
       display: inline-block;
@@ -93,7 +93,8 @@
         height:400px;
     }
     option {
-      font-size: 190%;
+      text-align:center;
+      font-size: 150%;
     }
     .tooltip {
       color: #222; 
