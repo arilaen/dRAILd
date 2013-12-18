@@ -8,7 +8,6 @@ var express = require('express')
   , d3 = require('d3')
   , topojson = require('topojson')
   , queue = require('queue-async')
-  //, jsdom = require('jsdom')
   , $ = require('jquery');
   //, requirejs = require('requirejs');
 

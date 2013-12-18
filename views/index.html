@@ -73,9 +73,9 @@
 
 			//Define map projection
 			var projection = d3.geo.albers()
-								  .center([24.9, 42])
+								  .center([25, 42])
 								   .translate([w/2, h/2])
-								   .scale([30000]); //For more full view try 18000-24000
+								   .scale([25000]); //For more full view try 18000-24000
 
 			//var color = d3.scale.category10();
 			//Define path generator
@@ -109,7 +109,7 @@
 		//var tooltip = d3.select("#map").append("div");
 		queue()
 			    //.defer(d3.json, "static/json/states.json")
-			    .defer(d3.json, "/data/masscountytopo.json")
+			    .defer(d3.json, "/data/massCountiesTopo.json")
 			    .defer(d3.json, "/data/railsmbtatopo.json")
 			    .defer(d3.csv, "/data/StationOrder.csv")
 			    .await(ready);
@@ -118,8 +118,8 @@
 					if (error) return console.warn(error);
 					//var mass = topojson.feature(states, states.objects.mass).features;
       				//var rhode = topojson.feature(states, states.objects.rhodeisland).features;
-      				var towns = topojson.feature(townsjson, townsjson.objects.masscountyGeo).features,
-      				neighbors = topojson.neighbors(townsjson.objects.masscountyGeo.geometries);
+      				var towns = topojson.feature(townsjson, townsjson.objects.masscounties).features,
+      				neighbors = topojson.neighbors(townsjson.objects.masscounties.geometries);
       				var rails = topojson.feature(railjson, railjson.objects.trainsGeoJSON).features;
 						g.selectAll("path")
 							.data(towns)
@@ -129,7 +129,7 @@
 						    .attr("d", path)
 						    .style("fill","#CCFF99")
 						   //.style("fill", function(d, i) { return color(d.color = d3.max(neighbors[i], function(n) { return towns[n].color; }) + 1 | 0); })
-						    .style("opacity", 0.75)
+						    .style("opacity", 0.9)
 						    .style("stroke","grey")
 						    .style("stroke-width","0.5px");
 						
@@ -160,6 +160,16 @@
 						   .style("opacity", 0.75)
 						   .on("click",clickstation)
 						   .on("dblclick",unclickstation);
+
+						g.selectAll(".county-label")
+						    .data(topojson.feature(townsjson, townsjson.objects.masscounties).features)
+						  .enter().append("text")
+						    .attr("class", function(d) { return "county-label" + d.id;})
+						    .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+						    //.attr("dy", "3.5em")
+						    .attr("opacity",.5)
+						    .attr("font-weight",300)
+						    .text(function(d) { return d.properties.COUNTY.split(' ')[0]; });
 					
 
 	      				/*raillines

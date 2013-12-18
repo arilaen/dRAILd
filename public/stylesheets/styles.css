@@ -13,10 +13,7 @@
       text-align: center;
       margin:35px 10% 50px 10%;
     }
-    /*.overlay {
-      fill: none;
-      pointer-events: all;
-    }*/
+    
     .stroke {
       fill: none;
       stroke: #000;
@@ -43,19 +40,10 @@
     }
 
     .raillines.active {
-      stroke: #00CC33;
-      stroke-width:5px;
+      stroke: #660099;
+      stroke-width:4px;
     }
-    .stations {
-      pointer-events:none;
-    }
-    .stations.clickable {
-      pointer-events:all;
-    }
-    /*.railline {
-      stroke-dasharray: 2,2;
-      stroke-linejoin: round;
-    }*/
+
     a {
         text-decoration: none;
     }
