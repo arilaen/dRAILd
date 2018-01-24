@@ -8,13 +8,13 @@
     "url": "https://github.com/arilaen/draild-app.git"
   }
   , "dependencies": {
-      "express": "2.5.8"
+      "express": "4.16.2"
     , "stylus": ">= 0.0.1"
     , "jade": ">= 0.0.1"
-    , "d3": "3"
-    , "topojson": "1.4"
-    , "queue-async": "1.0"
-    , "jquery": "1.8.3"
-    , "requirejs": "2.1.9"
+    , "d3": "4"
+    , "topojson": "3.0"
+    , "queue-async": "1.2"
+    , "jquery": "3.3.1"
+    , "requirejs": "2.3.5"
   }
 }
